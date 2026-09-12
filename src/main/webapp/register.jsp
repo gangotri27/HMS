@@ -15,6 +15,9 @@
 
         <label>Phone Number:</label>
         <input type="text" name="phone" required><br><br>
+        
+        <label>Mobile Number:</label>
+        <input type="text" name="mobile" pattern="[0-9]{10}" title="Enter a valid 10-digit mobile number" required><br><br>
 
         <label>Select Department:</label>
         <select name="department" required>
@@ -43,6 +46,7 @@
         String patientName = request.getParameter("patientName");
         String email = request.getParameter("email");
         String phone = request.getParameter("phone");
+        String mobile = request.getParameter("mobile");
         String department = request.getParameter("department");
         String doctorName = request.getParameter("doctorName");
         String appointmentDate = request.getParameter("appointmentDate");
@@ -54,6 +58,7 @@
         <p><b>Patient Name:</b> <%= patientName %></p>
         <p><b>Email:</b> <%= email %></p>
         <p><b>Phone:</b> <%= phone %></p>
+        <p><b>Mobile:</b> <%= mobile %></p>
         <p><b>Department:</b> <%= department %></p>
         <p><b>Doctor:</b> <%= doctorName %></p>
         <p><b>Date:</b> <%= appointmentDate %></p>
